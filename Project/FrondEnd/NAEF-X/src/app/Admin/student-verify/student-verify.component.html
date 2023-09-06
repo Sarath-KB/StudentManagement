@@ -1,0 +1,37 @@
+<div class="body">
+    <div class="imgbx">
+        <img [src]="image || 'assets/no_profile_pic.jpg'">
+        <label class="name">{{name}}</label>
+        <label class="title">{{class}}</label>
+    </div>
+    <div class="content">
+        <div class="details">
+            <label class="head">E-MAIL ID</label>
+            <INPUT type="text" value="{{email}}" readonly disabled>
+        </div>
+        <div class="details">
+            <label class="head">DOB</label>
+            <INPUT type="text" value="{{dob}}" readonly disabled>
+        </div>
+        <div class="details">
+            <label class="head">GENDER</label>
+            <INPUT type="text" value="{{gender}}" readonly disabled>
+        </div>
+        <div class="details">
+            <label class="head">Contact Number</label>
+            <INPUT type="text" value="{{contact}}" readonly disabled>
+        </div>
+        <div class="details">
+            <label class="head">ADDRESS</label>
+            <INPUT type="text" value="{{address}}" readonly disabled>
+        </div>
+        <div class="details">
+            <label class="head">Adhaar</label>
+            <INPUT type="text" value="{{adhaar}}" readonly disabled>
+        </div>
+        <div class="buttons">
+            <button class="accept" (click)="accept()">ACCEPT</button>
+            <button class="reject" (click)="reject()">REJECT</button>
+        </div>
+    </div>
+</div>

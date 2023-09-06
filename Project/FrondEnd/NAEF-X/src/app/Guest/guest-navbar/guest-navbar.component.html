@@ -1,0 +1,25 @@
+<div class="navbar">
+    <div class="img">
+        <img src="/assets/naefx.png">
+    </div>
+    <div class="heading">
+        <h1>NEW AUTOMATED EDUCATION FRAMEWORK FOR EXCELLENCE</h1>
+    </div>
+    <div class="items">
+        <a class="content" routerLink="/ghome" selected>Home</a>
+        <a class="content" routerLink="/about">About</a>
+        <a class="content" routerLink="/contact">Contact</a>
+        <!-- <a class="content" routerLink="/login">Login</a> -->
+        <div class="dropdown">
+            <a class="content dropbtn">Login</a>
+            <div class="dropdown-content">
+                <a routerLink="/slogin">Student</a>
+                <a routerLink="/flogin">Faculty</a>
+                <a routerLink="/alogin">Admin</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,21 @@
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="assets/reg-1.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>DESIGNATION REGISTRATION</h2>
+                <form [formGroup]="designationform" (ngSubmit)="designationsubmit()">
+                    <div class="inputBx">
+                        <span>DESIGNATION TITLE</span>
+                        <input type="text" formControlName="designationtitle">
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="REGISTER">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

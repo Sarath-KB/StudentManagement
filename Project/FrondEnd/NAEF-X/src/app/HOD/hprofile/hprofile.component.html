@@ -1,0 +1,43 @@
+<body>
+    <div class="wrapper">
+      <div class="img-area">
+        <div class="inner-area">
+          <img [src]=" imageUrl || 'assets/no_profile_pic.jpg'" alt="">
+        </div>
+      </div>
+      <div class="name">{{name}}</div>
+      <div class="about">{{designation}}, Department of {{dept}}</div>
+      <div class="social-icons">
+        <a routerLink="/HOD/edithodprofile" class="fb"><i class='bx bx-pencil'></i></a>
+        <a routerLink="/HOD/hchangepassword" class="fb"><i class='bx bxs-key'></i></a>
+      </div>
+      <div class="buttons">
+        <button>E-Mail</button>
+        <button>{{email}}</button>
+      </div>
+      <div class="buttons">
+        <button>Contact Number</button>
+        <button>+91{{contact}}</button>
+      </div>
+      <div class="buttons">
+        <button>Place</button>
+        <button>{{place}}</button>
+      </div>
+      <div class="buttons">
+        <button>District</button>
+        <button>{{district}}</button>
+      </div>
+      <div class="buttons">
+        <button>Date of Birth</button>
+        <button>{{dob}}</button>
+      </div>
+      <div class="buttons">
+        <button>Gender</button>
+        <button>{{gender}}</button>
+      </div>
+      <div class="buttons">
+        <button>Adhaar</button>
+        <button>{{adhaar}}</button>
+      </div>
+    </div>
+  </body>

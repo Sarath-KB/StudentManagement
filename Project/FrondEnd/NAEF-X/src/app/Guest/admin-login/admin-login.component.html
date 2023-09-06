@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login" [formGroup]="adminloginform">
+				<div class="login__field">
+					<i class='bx bx-user' ></i>
+					<input type="text" class="login__input" placeholder="User name" formControlName="adminusername">
+				</div>
+				<div class="login__field">
+					<i class='bx bxs-lock-alt' ></i>
+					<input type="password" class="login__input" placeholder="Password" formControlName="adminpassword">
+				</div>
+				<button class="button login__submit" (click)="adminLogin()">
+					<span class="button__text">Log In Now</span>
+					<i class='bx bx-right-arrow-alt' ></i>
+				</button>				
+			</form>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>

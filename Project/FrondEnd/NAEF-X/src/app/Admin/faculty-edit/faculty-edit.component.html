@@ -1,0 +1,57 @@
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="assets/reg-6.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>FACULTY EDIT</h2>
+                <form [formGroup]="facultyupdateform">
+                    <div class="inputBx">
+                        <span>FACULTY NAME</span>
+                        <input type="text" formControlName="facultyname">
+                    </div>
+                    <div class="inputBx">
+                        <span>DEPARTMENT</span>
+                        <select formControlName="facultydept">
+                            <option disabled selected>--Select--</option>
+                            <option *ngFor="let us of readdata2" value="{{us.dept_id}}">{{us.dept_name}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <span>DESIGNATION</span>
+                        <select formControlName="facultydesignation">
+                            <option disabled selected>--Select--</option>
+                            <option *ngFor="let us of readdata1" value="{{us.designation_id}}">{{us.designation_title}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <span>E-MAIL ID</span>
+                        <input type="text" formControlName="facultyemail">
+                    </div>
+                    <div class="inputBx">
+                        <span>DISTRICT</span>
+                        <select formControlName="facultydist" (change)="getPlace($event)">
+                            <option value="" selected disabled style="text-align: center;">------Select------</option>
+                            <option *ngFor="let us of readdata4" value="{{us.district_id}}">{{us.district_name}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <span>PLACE</span>
+                        <select formControlName="facultyplace">
+                            <option value="" selected disabled style="text-align: center;">------Select------</option>
+                            <option *ngFor="let us of readdata3" value="{{us.place_id}}">{{us.place_name}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <span>USER NAME</span>
+                        <input type="text" formControlName="facultyusername">
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="UPDATE" (click)="facultyupdate()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

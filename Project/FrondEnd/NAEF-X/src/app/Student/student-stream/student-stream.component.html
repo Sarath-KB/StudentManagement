@@ -1,0 +1,18 @@
+<div class="content2">
+    <div class="left">
+        <div class="head">
+            <h3>Upcomming</h3>
+        </div>
+        <p>Woohoo, no work due soon!</p>
+    </div>
+    <div class="right">
+        <div class="activity" *ngFor="let us of readdata" [routerLink]="['/student/ssem/sstreamview',us.notes_id]">
+            <div class="heading">
+                <span>{{us.faculty_name}} posted a new material: {{us.notes_title}} - {{us.subject_name}}</span>
+            </div>
+            <div class="time">
+                <span>10:07 PM</span>
+            </div>
+        </div>
+    </div>
+</div>

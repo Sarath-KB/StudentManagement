@@ -1,0 +1,107 @@
+body{
+	margin:0;
+	padding:20px;
+	font-family: sans-serif;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.border {
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px 5px #858585;
+  width: 98%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+caption {
+  display: flex;
+  float: right;
+  justify-content: space-between;
+  color: black;
+  font-weight: 500;
+  margin: 5px 5px 0px 5px;
+  width: 65%;
+}
+button {
+  background-color: black;
+  color: white;
+  font-weight: 1000;
+  height: 50px;
+  width: 100PX;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: black;
+}
+
+.table{
+	width: 100%;
+	border-collapse: collapse;
+  font-weight: 500;
+  border-bottom: 5px solid black;
+}
+
+.table td,.table th{
+  padding:12px 15px;
+  border:1px solid #ddd;
+  text-align: center;
+  font-size:16px;
+}
+
+.table th{
+	background-color: black;
+	color:#ffffff;
+}
+
+.table tbody tr:nth-child(even){
+	background-color: #dddcdc;
+}
+
+.action:hover {
+  color: red;
+  cursor: pointer;
+}
+
+tr:hover,
+.table tbody tr:nth-child(even):hover {
+  background: rgb(134, 134, 134);
+  font-weight: 900;
+  transition: 1s;
+}
+
+/*responsive*/
+
+@media(max-width: 500px){
+	.table thead{
+		display: none;
+	}
+
+	.table, .table tbody, .table tr, .table td{
+		display: block;
+		width: 100%;
+	}
+	.table tr{
+		margin-bottom:15px;
+	}
+	.table td{
+		text-align: right;
+		padding-left: 50%;
+		text-align: right;
+		position: relative;
+	}
+	.table td::before{
+		content: attr(data-label);
+		position: absolute;
+		left:0;
+		width: 50%;
+		padding-left:15px;
+		font-size:15px;
+		font-weight: bold;
+		text-align: left;
+	}
+}

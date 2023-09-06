@@ -1,0 +1,46 @@
+<div class="content">
+    <div class="head">
+        <img src="assets/naefx.png" alt="">
+        <span>Complaint Letter</span>
+    </div>
+    <div class="letter">
+        <div class="from">
+            <span>From,</span>
+            <input type="text" value="{{s_name}}" readonly>
+            <input type="text" value="{{s_email}}" readonly>
+        </div>
+        <div class="from">
+            <span>To,</span>
+            <input type="text" value="{{c_target}}" readonly>
+        </div>
+
+        <div class="from">
+            <span>Complaint Type,</span>
+            <input type="text" value="{{c_category}}" readonly>
+        </div>
+
+        <div class="title">
+            <span>Respected Sir/Ma'am</span>
+        </div>
+        <div class="complaint">
+            <textarea readonly>{{complaint}}</textarea>
+        </div>
+        <div class="placedate">
+            <span><b>Place : </b>{{place}}</span>
+            <span><b>Date  : </b>{{date}}</span>
+        </div>
+        <div class="to">
+            <form [formGroup]="statusupdateform">
+            <span>Complaint Status   :  </span>
+            <select formControlName="status">
+                <option value="0">Not Resolved</option>
+                <option value="1">Resolved</option>
+            </select>
+        </form>
+        </div>
+        <br>
+        <div class="button">
+            <button (click)="updatestatus()">Update</button>
+        </div>
+    </div>
+</div>

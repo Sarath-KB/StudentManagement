@@ -1,0 +1,29 @@
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="assets/reg-2.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>PLACE&nbsp;&nbsp;REGISTRATION</h2>
+                <form [formGroup]="placeform" (ngSubmit)="placesubmit()">
+                    <div class="inputBx">
+                        <span>PLACE NAME</span>
+                        <input type="text" formControlName="placename">
+                    </div>
+                    <div class="inputBx">
+                        <span>DISTRICT</span>
+                        <select formControlName="districtname">
+                            <option value="" selected disabled style="text-align: center;">------Select------</option>
+                            <option *ngFor="let us of readdata" value="{{us.district_id}}">{{us.district_name}}</option>
+                            
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="REGISTER">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

@@ -1,0 +1,23 @@
+<div class="content2">
+    <div class="left">
+        <div class="head">
+            <h3>Upcomming</h3>
+        </div>
+        <p>Woohoo, no work due soon!</p>
+    </div>
+    <div class="right">
+        <div class="activity-button">
+            <button [routerLink]="['/Teacher/teacherclass/tregnotes', sub_id]">
+                <img [src]=" imageUrl || 'assets/no_profile_pic.jpg'"><span>Announce Someting To Your Class...</span>
+            </button>
+        </div>
+        <div *ngFor="let us of readdata" class="activity" [routerLink]="['/Teacher/teacherclass/tnoteview',us.notes_id]">
+            <div class="heading">
+                <span>You posted a new material:  {{us.notes_title}} - {{us.subject_name}}</span>
+            </div>
+            <div class="time">
+                <span>{{us.date}}</span>
+            </div>
+        </div>
+    </div>
+</div>

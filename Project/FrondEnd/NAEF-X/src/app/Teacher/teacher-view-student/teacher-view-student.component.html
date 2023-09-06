@@ -1,0 +1,24 @@
+<div class="border">
+    <caption>
+      <h1>STUDENT DETAILS</h1>
+      <button>SORT BY</button>
+    </caption>
+    <table class="table">
+      <thead>
+        <tr>
+            <th>Sl. No.</th>
+            <th>STUDENT NAME</th>
+            <th>CLASS</th>
+            <th>VIEW MORE</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let us of readdata; let j=index">
+            <td>{{j+1}}</td>
+            <td>{{us.student_name}}</td>
+            <td>{{us.course_abbreviation}} {{us.class_name}} {{us.batch_name}}</td>
+            <td class="action" [routerLink]="['/Teacher/tstudentmore', us.student_id]">VIEW MORE</td>
+          </tr>
+      </tbody>
+    </table>
+    </div>

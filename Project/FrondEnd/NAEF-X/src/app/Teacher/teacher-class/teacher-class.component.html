@@ -1,0 +1,16 @@
+<div class="navbar">
+    <div class="title">
+        <span routerLink="/Teacher/thome"><i class='bx bx-left-arrow-circle' style="cursor: pointer;"></i></span>
+        <span>&nbsp;&nbsp;&nbsp;{{semname}} {{course}} {{classname}} {{batchname}} ( {{subject}} )</span>
+    </div>
+    <div class="links">
+        <ul>
+            <li><a [routerLink]="['/Teacher/teacherclass/tstream',sub_id]">Stream</a></li>
+            <li><a [routerLink]="['/Teacher/teacherclass/tclasswork',sub_id]">Classwork</a></li>
+            <li><a [routerLink]="['/Teacher/teacherclass/tclassstudents',class_id]">Students</a></li>
+        </ul>
+    </div>
+</div>
+<div class="content1">
+    <router-outlet></router-outlet>
+</div>

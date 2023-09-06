@@ -1,0 +1,39 @@
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="assets/reg-8.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>COURSE REGISTRATION</h2>
+                <form [formGroup]="courseform" (ngSubmit)="cousesubmit()">
+                    <div class="inputBx">
+                        <span>COURSE NAME</span>
+                        <input type="text" formControlName="coursename">
+                    </div>
+                    <div class="inputBx">
+                        <span>ABBRIVIATION</span>
+                        <input type="text" formControlName="courseabbriviation">
+                    </div>
+                    <div class="inputBx">
+                        <span>COURSE TYPE</span>
+                        <select  formControlName="coursetype">
+                            <option value="" selected disabled style="text-align: center;">------Select------</option>
+                            <option *ngFor="let us of readdata1" value="{{us.course_type_id}}">{{us.course_type}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <span>DEPARTMENT</span>
+                        <select formControlName="deptname">
+                            <option value="" selected disabled style="text-align: center;">------Select------</option>
+                            <option *ngFor="let us of readdata2" value="{{us.dept_id}}">{{us.dept_name}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="REGISTER">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

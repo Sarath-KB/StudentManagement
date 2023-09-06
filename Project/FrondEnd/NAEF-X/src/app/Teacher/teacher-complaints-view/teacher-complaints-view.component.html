@@ -1,0 +1,31 @@
+<div class="border">
+    <caption>
+        <h1>COMPLAINTS DETAILS</h1>
+        <button>SORT BY</button>
+    </caption>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>DATE OF COMPLAINT</th>
+                <th>COMPLAINANT</th>
+                <th>COMPLAINANT TYPE</th>
+                <th>COMPLAINT TYPE</th>
+                <th>STATUS</th>
+                <th>View & Respond</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let us of readdata; let j=index">
+                <td>{{j+1}}</td>
+                <td>{{us.complaint_date}}</td>
+                <td>{{us.student_name}}</td>
+                <td>{{us.complainant_type}}</td>
+                <td>{{us.complainant_category_title}}</td>
+                <td *ngIf="us.complaint_status===0">Not Resolved</td>
+                <td *ngIf="us.complaint_status===1">Resolved</td>
+                <td class="action" [routerLink]="['/Teacher/tcomplaintrespond',us.complaint_id]">View & Respond</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

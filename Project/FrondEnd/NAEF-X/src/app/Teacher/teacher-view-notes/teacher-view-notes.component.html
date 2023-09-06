@@ -1,0 +1,9 @@
+<body align="center">
+    <div class="flex">
+        <h1>{{title}}</h1>
+        <button [routerLink]= "['/Teacher/teacherclass/teditnote',n_id]">EDIT</button>
+        <button (click)="deletenotes()">DELETE</button>
+    </div>
+    <p>{{description}}</p>
+    <iframe [src]="sanitizeurl(Pdfurl) || 'assets/NAEF-X_Report (2).pdf'" width="75%" height="400px"></iframe>
+</body>

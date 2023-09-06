@@ -1,0 +1,21 @@
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="assets/reg-1.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>DISTRICT&nbsp;&nbsp;REGISTRATION</h2>
+                <form [formGroup]="districupdataform">
+                    <div class="inputBx">
+                        <span>DISTRICT NAME</span>
+                        <input type="text" formControlName="districtname">
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="UPDATE" (click)="districtUpdate()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

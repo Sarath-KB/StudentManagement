@@ -1,0 +1,27 @@
+<div class="border">
+    <caption>
+        <button routerLink="/Admin/semester">ADD NEW</button>
+        <h1>SEMESTER DETAILS</h1>
+        <button style="background: #fff; border:#fff;"></button>
+    </caption>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Sl. No.</th>
+                <th>SEMESTER NUMBER</th>
+                <th>CLASS NAME</th>
+                <th>DELETE</th>
+                <th>EDIT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let us of readdata; let j=index">
+                <td>{{j+1}}</td>
+                <td>{{us.semester_name}}</td>
+                <td>{{us.course_abbreviation}} {{us.class_name}} {{us.batch_name}}</td>
+                <td><a (click)="deleteSemester(us.semester_id)">DELETE</a></td>
+                <td><a [routerLink]="['/Admin/editsemester',us.semester_id]">EDIT</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,21 @@
+<div class="navbar">
+    <div class="title">
+        <span routerLink="/student/shome"><i class='bx bx-left-arrow-circle' style="cursor: pointer;"></i></span>
+        <span>&nbsp;&nbsp;&nbsp;SEMESTER 1</span>
+    </div>
+    <div class="links">
+        <div class="dropdown">
+            <form [formGroup]="selectsub">
+            <select (change)="onchange($event)" formControlName="subject">
+                <option selected>---Select---</option>
+                <option *ngFor="let us of readdata" value="{{us.subject_id}}">{{us.subject_name}}</option>
+              </select>
+            </form>
+        </div>
+        <a class="link" [routerLink]="['/student/ssem/sstream', semid]">Stream</a>
+        <a class="link" [routerLink]="['/student/ssem/sclasswork', semid]" >Classwork</a>
+    </div>
+</div>
+<div class="content1">
+    <router-outlet></router-outlet>
+</div>

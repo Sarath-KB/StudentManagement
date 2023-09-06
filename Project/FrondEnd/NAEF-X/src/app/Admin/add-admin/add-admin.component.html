@@ -1,0 +1,41 @@
+<body>
+    <div class="main-block">
+        <div class="left-part">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>Register New Admin</h1>
+            <p>Note: Registering a new admin will provide all the privilages of admin to that person. So you need to
+                think
+                twice about it...</p>
+        </div>
+
+        <div class="info">
+            <div class="title">
+                <i class="fas fa-pencil-alt"></i>
+                <h2>Register here</h2>
+            </div>
+            <form [formGroup]="addadminform">
+                <input type="text" class="fname" placeholder="Full name" formControlName="name">
+                <br>
+                <span>Choose Admin Photo</span>
+                <br>
+                <input type="file" name="" class="" id="" (change)="onFileChange($event)">
+                <br>
+                <input type="text" placeholder="Email" formControlName="email">
+                <br>
+                <input type="text" placeholder="User Name" formControlName="username">
+                <br>
+                <input type="password" placeholder="Password" formControlName="password">
+                <br>
+                <select formControlName="designation">
+                    <option value="" selected>---Select---</option>
+                    <option value="Principal">Principal</option>
+                    <option value="Vice Principal">Vice Principal</option>
+                    <option value="Management Member">Management Member</option>
+                    <option value="Staff">Staff</option>
+                </select>
+                <br>
+                <button type="submit" (click)="addAdmin()">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>

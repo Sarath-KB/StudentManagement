@@ -1,0 +1,17 @@
+<div class="content2">
+    <div class="button">
+        <button [routerLink]="['/Teacher/teacherclass/tclassworkreg',sub_id]"><i class='bx bx-plus'></i>Create</button>
+    </div>
+    <div class="content1">
+        <div class="right">
+            <div *ngFor="let us of readdata" class="activity" [routerLink]="['/Teacher/teacherclass/tclassworkdetails',us.assignment_id]">
+                <div class="heading">
+                    <span>You posted a new Classwork: {{us.assignment_title}} - {{us.subject_name}}</span>
+                </div>
+                <div class="time">
+                    <span>Due Before : {{us.due_date}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

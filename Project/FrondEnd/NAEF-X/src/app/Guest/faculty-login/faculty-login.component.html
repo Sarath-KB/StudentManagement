@@ -1,0 +1,23 @@
+<body>
+	<div class="main">
+		<input type="checkbox" id="chk" aria-hidden="true">
+            
+			<div class="signup">
+				<form [formGroup]="facultyloginform">
+					<label for="chk" aria-hidden="true">Faculty&nbsp;Login</label>
+					<input type="text" name="txt" placeholder="User name" formControlName="facultyusername">
+					<input type="password" name="pswd" placeholder="Password" formControlName="facultypassword">
+					<button (click)="facultylogin()">Login</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form [formGroup]="hodloginform">
+					<label for="chk" aria-hidden="true">HOD&nbsp;Login</label>
+					<input type="email" name="email" placeholder="Email"  formControlName="hodusername">
+					<input type="password" name="pswd" placeholder="Password"  formControlName="hodpassword">
+					<button (click)="hodlogin()">Login</button>
+				</form>
+			</div>
+	</div>
+</body>

@@ -1,0 +1,79 @@
+
+.content2 {
+    display: flex;
+      justify-content: space-between;
+      width: 100%;
+}
+
+.left {
+    border: 2px solid black;
+    width: 24%;
+    height: auto;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.left .head {
+    color: darkblue;
+    border-bottom: 5px solid darkblue;
+}
+
+.left .head h3 {
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 73%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.right .activity-button button {
+  color: rgb(141, 141, 141);
+  display: block;
+  box-shadow: 1px 1px 1px 1px rgb(158, 156, 156);
+  border-radius: 6px;
+  border: none;
+  padding: 20px;
+  margin: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 99%;
+  height: 60px;
+}
+
+ .right .activity-button button img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-top: -15px;
+}
+
+.right .activity {
+  color: rgb(141, 141, 141);
+    display: block;
+    box-shadow: 1px 1px 1px 1px rgb(158, 156, 156);
+    border-radius: 6px;
+    padding: 20px;
+    margin: 5px;
+    cursor: pointer;
+    height: 60px;
+    transition: 0.5s;
+}
+
+.right .activity:hover {
+  background: #8d8d8d;
+  color: #000;
+}
+.right .activity .heading {
+    color: #000;
+    font-size: 15px;
+    font-weight: 900;
+}

@@ -1,0 +1,34 @@
+<div class="body">
+    <div class="imgbx">
+        <img [src]="imageUrl || 'assets/no_profile_pic.jpg'" alt="img">
+        <label class="name" *ngIf="readdata">{{readdata.faculty_name}}</label>
+        <label class="title">{{designation}}</label>
+        <label class="title">{{dept}}</label>
+    </div>
+    <div class="content">
+        <div class="details">
+            <label class="head">E-MAIL ID</label>
+            <INPUT type="text" value="{{email}}" readonly disabled>
+        </div>
+        <div class="details">
+            <label class="head">DOB</label>
+            <INPUT type="text" value="{{dob}}" readonly disabled>
+        </div>
+        <div class="details">
+            <label class="head">GENDER</label>
+            <INPUT type="text" value="{{gender}}" readonly disabled>
+        </div>
+        <div class="details">
+            <label class="head">Contact Number</label>
+            <INPUT type="text" value="{{contactno}}" readonly disabled>
+        </div>
+        <div class="details">
+            <label class="head">ADDRESS</label>
+            <INPUT type="text" value="{{address}}" readonly disabled>
+        </div>
+        <div class="details">
+            <label class="head">Adhaar</label>
+            <INPUT type="text" value="{{adhaar}}" readonly disabled>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="border">
+    <caption>
+        <button routerLink="/Admin/course">ADD NEW</button>
+        <h1>COURSE DETAILS</h1>
+        <button style="background: #fff; border:#fff;"></button>
+    </caption>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Sl. No.</th>
+                <th>COURSE NAME</th>
+                <th>ABBREVIATION</th>
+                <th>DEPARTMENT</th>
+                <th>COURSE TYPE</th>
+                <th>DELETE</th>
+                <th>EDIT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let us of readdata; let j=index">
+                <td>{{j+1}}</td>
+                <td>{{us.course_name}}</td>
+                <td>{{us.course_abbreviation}}</td>
+                <td>{{us.dept_name}}</td>
+                <td>{{us.course_type}}</td>
+                <td><a (click)="deleteCourse(us.course_id)">DELETE</a></td>
+                <td><a [routerLink]="['/Admin/editcourse',us.course_id]">EDIT</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

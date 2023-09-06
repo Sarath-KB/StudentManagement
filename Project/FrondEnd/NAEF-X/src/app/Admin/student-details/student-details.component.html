@@ -1,0 +1,31 @@
+<div class="border">
+    <caption>
+        <button routerLink="/Admin/student">ADD NEW</button>
+        <h1>STUDENT DETAILS</h1>
+        <button style="background: #fff; border:#fff;"></button>
+    </caption>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Sl. No.</th>
+                <th>STUDENT NAME</th>
+                <th>BATCH</th>
+                <th>COURSE</th>
+                <th>VIEW MORE</th>
+                <th>DELETE</th>
+                <th>EDIT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let us of readdata; let j=index">
+                <td>{{j+1}}</td>
+                <td>{{us.student_name}}</td>
+                <td>{{us.batch_name}}</td>
+                <td>{{us.course_abbreviation}}</td>
+                <td><a [routerLink]="['/Admin/studentmore',us.student_id]">VIEW MORE</a></td>
+                <td><a (click)="deleteStudent(us.student_id)">DELETE</a></td>
+                <td><a [routerLink]="['/Admin/studentedit',us.student_id]">EDIT</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

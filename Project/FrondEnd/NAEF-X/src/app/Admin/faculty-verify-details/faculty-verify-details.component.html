@@ -1,0 +1,23 @@
+<div class="border">
+    <caption>
+        <h1>FACULTY DETAILS</h1>
+    </caption>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Sl. No.</th>
+                <th>FACULTY NAME</th>
+                <th>DEPARTMENT</th>
+                <th>VIEW & Verify</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let us of readdata; let j=index">
+                <td>{{j+1}}</td>
+                <td>{{us.faculty_name}}</td>
+                <td>{{us.dept_name}}</td>
+                <td><a [routerLink]="['/Admin/facultyverify',us.faculty_id]">VIEW & Verify</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

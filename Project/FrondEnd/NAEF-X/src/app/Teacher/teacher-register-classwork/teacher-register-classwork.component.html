@@ -1,0 +1,33 @@
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="assets/reg-8.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Register Classwork</h2>
+                <form [formGroup]="classworkregisterform">
+                    <div class="inputBx">
+                        <span>TITLE</span>
+                        <input type="text" formControlName="title">
+                    </div>
+                    <div class="inputBx">
+                        <span>DISCRIPTION</span>
+                        <input type="text" formControlName="discription">
+                    </div>
+                    <div class="inputBx">
+                        <span>Due Date</span>
+                        <input type="date" formControlName="date">
+                    </div>
+                    <div class="inputBx">
+                        <span>FILES</span>
+                        <input type="file" (change)="onFileChange($event)">
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="REGISTER" (click)="submit()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

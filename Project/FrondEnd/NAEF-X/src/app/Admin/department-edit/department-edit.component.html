@@ -1,0 +1,21 @@
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="assets/reg-4.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>DEPARTMENT EDIT</h2>
+                <form [formGroup]="deptupdataform">
+                    <div class="inputBx">
+                        <span>DEPARTMENT NAME</span>
+                        <input type="text" formControlName="deptname">
+                    </div>
+                    <div class="inputBx" (click)="deptUpdate()">
+                        <input type="submit" value="UPDATE">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

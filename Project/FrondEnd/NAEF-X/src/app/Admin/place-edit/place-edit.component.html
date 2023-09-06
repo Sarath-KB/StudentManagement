@@ -1,0 +1,27 @@
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="assets/reg-2.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>PLACE EDIT</h2>
+                <form [formGroup]="placeupdateform">
+                    <div class="inputBx">
+                        <span>PLACE NAME</span>
+                        <input type="text" formControlName="placename">
+                    </div>
+                    <div class="inputBx">
+                        <span>DISTRICT</span>
+                        <select formControlName="distname">
+                            <option *ngFor="let us of readdata" value="{{us.district_id}}">{{us.district_name}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="UPDATE" (click)="placeUpdate()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

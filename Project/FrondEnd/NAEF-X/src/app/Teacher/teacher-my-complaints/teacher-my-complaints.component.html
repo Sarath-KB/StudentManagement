@@ -1,0 +1,30 @@
+<div class="border">
+    <caption>
+        <button routerLink="/Teacher/tregcomplaint">ADD NEW</button>
+        <h1>MY COMPLAINTS</h1>
+        <button>SORT BY</button>
+    </caption>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>DATE OF COMPLAINT</th>
+                <th>COMPLAINT TYPE</th>
+                <th>COMPLAINT</th>
+                <th>STATUS</th>
+                <th>COMMENTS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let us of readdata; let j=index">
+                <td>{{j+1}}</td>
+                <td>{{us.complaint_date}}</td>
+                <td>{{us.complainant_category_title}}</td>
+                <td>{{us.complaint}}</td>
+                <td *ngIf="us.complaint_status===0">Not Resolved</td>
+                <td *ngIf="us.complaint_status===1">Resolved</td>
+                <td>{{us.complaint_response}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,27 @@
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="assets/reg-3.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>BATCH EDIT</h2>
+                <form [formGroup]="batchupdateform">
+                    <div class="inputBx">
+                        <span>BATCH NAME</span>
+                        <input type="text" formControlName="batchname">
+                    </div>
+                    <div class="inputBx">
+                        <span>COURSE</span>
+                        <select formControlName="coursename">
+                            <option *ngFor="let us of readdata" value="{{us.course_id}}">{{us.course_abbreviation}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="UPDATE" (click)="batchupdate()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

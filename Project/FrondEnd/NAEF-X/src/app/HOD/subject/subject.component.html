@@ -1,0 +1,35 @@
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="assets/reg-10.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>SUBJECT REGISTRATION</h2>
+                <form [formGroup]="subjectform">
+                    <div class="inputBx">
+                        <span>SUBJECT NAME</span>
+                        <input type="text" formControlName="subjectname">
+                    </div>
+                    <div class="inputBx">
+                        <span>SEMESTER</span>
+                        <select formControlName="semestername">
+                            <option value="" selected disabled style="text-align: center;">------Select------</option>
+                            <option *ngFor="let us of readdata1" value="{{us.semester_id}}">{{us.semester_name}} {{us.course_abbreviation}} {{us.class_name}} {{us.batch_name}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <span>FACULTY</span>
+                        <select  formControlName="facultyname">
+                            <option value="" selected disabled style="text-align: center;">------Select------</option>
+                            <option *ngFor="let us of readdata2" value="{{us.faculty_id}}">{{us.faculty_name}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="REGISTER" (click)="registersubject()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

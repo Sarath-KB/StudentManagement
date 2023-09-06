@@ -1,0 +1,18 @@
+<body  *ngIf="status===2">
+    <div class="container">
+        <div class="card" *ngFor="let us of readdata; let j=index" [routerLink]="['/Teacher/teacherclass/tstream',us.subject_id]">
+            <div class="box">
+                <div class="content">
+                    <h2>{{j+1}}</h2>
+                    <h3>{{us.semester_name}} {{us.course_abbreviation}} {{us.class_name}}</h3>
+                    <h3>{{us.batch_name}}</h3>
+                    <a [routerLink]="['/Teacher/teacherclass/tstream',us.subject_id]">Stream</a>
+                    <br>
+                    <a [routerLink]="['/Teacher/teacherclass/tclasswork',us.subject_id]">Classworks</a>
+                    <br>
+                    <a [routerLink]="['/Teacher/teacherclass/tclassstudents',us.class_id]">Students</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

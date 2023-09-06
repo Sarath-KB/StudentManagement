@@ -1,0 +1,81 @@
+<body>
+
+  <div class="wrapper">
+    <!--Top menu -->
+    <div class="sidebar">
+      <div class="profile">
+        <img [src]="imageUrl || 'assets/no_profile_pic.jpg'">
+        <h3>{{hodname}}</h3>
+        <p>{{deptname}}</p>
+        <p><i><a routerLink="/HOD/hodprofile">My Profile</a></i></p>
+      </div>
+      <ul>
+        <li *ngIf="status===2">
+          <a routerLink="hodhome">
+            <span class="icon"><i class='bx bx-home-alt'></i></span>
+            <span class="item">Home</span>
+          </a>
+        </li>
+        <li class="right-menu" *ngIf="status===2">
+          <a class="menu-button">
+            <span><i class='bx bx-notepad'></i></span>
+            <span>&nbsp;&nbsp;&nbsp;Registrations</span>
+          </a>
+          <div class="dropdown-menu">
+        <li><a routerLink="viewclass">Class</a></li>
+        <li><a routerLink="viewsubject">subject</a></li>
+    </div>
+    </li>
+    <li class="right-menu" *ngIf="status===2">
+      <a class="menu-button">
+        <span><i class='bx bxs-user-detail'></i></span>
+        <span>&nbsp;&nbsp;&nbsp;View</span>
+      </a>
+      <div class="dropdown-menu">
+    <li><a routerLink="hviewfaculty">Faculty</a></li>
+    <li><a routerLink="hviewstudent">Student</a></li>
+  </div>
+  </li>
+  <li class="right-menu" *ngIf="status===2">
+    <a class="menu-button">
+      <span><i class='bx bxs-box'></i></span>
+      <span>&nbsp;&nbsp;&nbsp;Complaints</span>
+    </a>
+    <div class="dropdown-menu">
+  <li><a routerLink="hcomplaints">Register</a></li>
+  <li><a routerLink="hviewcomplaints">View</a></li>
+  </div>
+  </li>
+  <li *ngIf="status===2">
+    <a routerLink="hreport">
+      <span class="icon"><i class='bx bxs-report'></i></span>
+      <span class="item">Reports</span>
+    </a>
+  </li>
+  <li *ngIf="status===2">
+    <a (click)="Teahermode()">
+      <span class="icon"><i class='bx bxs-chalkboard'></i></span>
+      <span class="item">Teacher Mode</span>
+    </a>
+  </li>
+  <li>
+    <a (click)="hodlogout()">
+      <span class="icon"><i class='bx bx-log-out'></i></span>
+      <span class="item">Log Out</span>
+    </a>
+  </li>
+  </ul>
+
+  </div>
+  <div class="topbar">
+    <div class="left">
+      <img src="assets/naefx.png" width="50px" height="50px">
+      <h2 style="padding-left: 20px;">NEW AUTOMATED EDUCATION FRAMEWORK FOR EXCELLENCE</h2>
+    </div>
+  </div>
+
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</body>

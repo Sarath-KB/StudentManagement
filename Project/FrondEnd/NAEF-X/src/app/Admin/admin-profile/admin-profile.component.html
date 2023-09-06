@@ -1,0 +1,19 @@
+<body>
+    <div class="wrapper">
+      <div class="img-area">
+        <div class="inner-area">
+          <img [src]=" imageUrl || 'assets/no_profile_pic.jpg'" alt="">
+        </div>
+      </div>
+      <div class="name">{{name}}</div>
+      <div class="about">{{designation}}</div>
+      <div class="social-icons">
+        <a routerLink="/Admin/adminprofileedit" class="fb"><i class='bx bx-pencil'></i></a>
+        <a routerLink="/Admin/adminchangepass" class="fb"><i class='bx bxs-key'></i></a>
+      </div>
+      <div class="buttons">
+        <button>E-Mail</button>
+        <button>{{email}}</button>
+      </div>
+    </div>
+  </body>

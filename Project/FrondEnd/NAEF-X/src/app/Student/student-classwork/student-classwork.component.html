@@ -1,0 +1,12 @@
+<div class="content2">
+    <div class="right">
+        <div class="activity" *ngFor="let us of readdata" [routerLink]="['/student/ssem/ssubmitclasswork',us.assignment_id]">
+            <div class="heading">
+                <span>{{us.faculty_name}} posted a new Assignment: {{us.assignment_title}} - {{us.subject_name}}</span>
+            </div>
+            <div class="time">
+                <span>10:07 PM</span>
+            </div>
+        </div>
+    </div>
+</div>

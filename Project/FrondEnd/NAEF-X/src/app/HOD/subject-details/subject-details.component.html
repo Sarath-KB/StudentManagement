@@ -1,0 +1,29 @@
+<div class="border">
+  <caption>
+    <button routerLink="/HOD/subject">ADD NEW</button>
+    <h1>SUBJCET DETAILS</h1>
+    <button style="background: #fff; border:#fff;"></button>
+  </caption>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>SUBJCET</th>
+        <th>SEMESTER</th>
+        <th>TEACHER</th>
+        <th>DELETE</th>
+        <th>EDIT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let us of readdata; let j=index">
+        <td data-label="S.No">{{j+1}}</td>
+        <td data-label="Name">{{us.subject_name}}</td>
+        <td data-label="sem">{{us.semester_name}}</td>
+        <td data-label="Tuter">{{us.faculty_name}}</td>
+        <td data-label="Delete" class="action" (click)="DeleteSubject(us.subject_id)">DELETE</td>
+        <td data-label="Edit" class="action" [routerLink]="['/HOD/hsubjectedit',us.subject_id]">EDIT</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

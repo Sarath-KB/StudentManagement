@@ -1,0 +1,56 @@
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="assets/reg-4.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>STUDENT REGISTRATION</h2>
+                <form [formGroup]="studentform">
+                    <div class="inputBx">
+                        <span>STUDENT NAME</span>
+                        <input type="text" formControlName="studentname">
+                    </div>
+                    <div class="inputBx">
+                        <span>CLASS</span>
+                        <select formControlName="classname">
+                            <option value="" selected disabled style="text-align: center;">------Select------</option>
+                            <option *ngFor="let us of readdata" value="{{us.class_id}}">{{us.course_abbreviation}} {{us.class_name}} {{us.batch_name}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <span>E-MAIL ID</span>
+                        <input type="text" formControlName="studentemail">
+                    </div>
+                    <div class="inputBx">
+                        <span>DISTRICT</span>
+                        <select formControlName="studdist" (change)="getPlace($event)">
+                            <option value="" selected disabled style="text-align: center;">------Select------</option>
+                            <option *ngFor="let us of readdata4" value="{{us.district_id}}">{{us.district_name}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <span>PLACE</span>
+                        <select formControlName="studplace">
+                            <option value="" selected disabled style="text-align: center;">------Select------</option>
+                            <option *ngFor="let us of readdata3" value="{{us.place_id}}">{{us.place_name}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <span>USER NAME</span>
+                        <div class="generate">
+                            <input type="text" formControlName="studentusername">&nbsp;&nbsp;&nbsp;&nbsp;<button style="border-radius: 25%; cursor: pointer;" (click)="generateusername()"><i class='bx bx-refresh'></i></button>
+                        </div>
+                    </div>
+                    <div class="inputBx">
+                        <span>PASSWORD</span>
+                        <input type="password" formControlName="studentpassword">
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="REGISTER" (click)="studentsubmit()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

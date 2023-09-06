@@ -1,0 +1,122 @@
+.content {
+    display: flex;
+	margin: 10px;
+    flex-direction: column;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.content .head {
+    display: flex;
+    width: 99%;
+    background: darkblue;
+    padding: 10px;
+    align-self: center;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.content .head img {
+    width: 80px;
+    height: 80px;
+}
+
+.content .head span {
+    color: #fff;
+    padding-top: 5px;
+    font-size: 40px;
+    font-weight: 900;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content .letter {
+    padding: 10px;
+}
+
+.content .letter .from {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.content .letter .from span {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+}
+
+.content .letter .from input {
+    width: 400px;
+    height: 30px;
+    font-size: 16px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.content .letter .from input:focus {
+    outline: none;
+}
+
+.content .letter .to {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.content .letter .to span {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+}
+
+.content .letter .to select {
+    width: 400px;
+    height: 30px;
+    font-size: 16px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.content .letter .to select:focus {
+    outline: none;
+}
+
+.content .letter .title {
+    padding-top: 50px;
+}
+
+.content .letter .complaint textarea{
+    margin-top: 30px;
+    width: 100%;
+    height: 100px;
+    background: none;
+    border: none;
+    font-size: 17px;
+}
+
+.content .letter .complaint textarea:focus {
+    outline: none;
+}
+
+.content .letter .placedate {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .letter .button {
+    display: flex;
+    justify-content: center;
+}
+
+.content .letter .button button {
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    background: darkblue;
+    font-size: 20px;
+    border-radius: 8px;
+}

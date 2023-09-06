@@ -1,0 +1,28 @@
+<body>
+  <form [formGroup]="adminForm">
+  <div class="wrapper">
+    <div class="img-area">
+      <div class="inner-area">
+        <img [src]="adminForm.controls['image']?.value || imageUrl || 'assets/no_profile_pic.jpg'" alt="img">
+        <div class="hover-edit-image">
+          <div class="img-holder">
+            <input type="file" name="" class="" id="" (change)="onFileChange($event)">
+          </div>
+          <label for="" class="edit-img-label">Edit Image</label>
+        </div>
+      </div>
+    </div>
+    <div class="icon arrow" routerLink="/Admin/adminprofile"><i class='bx bx-left-arrow-alt'></i></div>
+    <div class="name">{{name}}</div>
+    <div class="about">{{designation}}</div>
+    <br>
+    <div class="buttons">
+      <button>E-Mail</button>
+      <input type="text" formControlName="email">
+    </div>
+    <div class="social-icons">
+      <a class="fb" (click)="updateprofile()"><i class='bx bxs-save'></i></a>
+    </div>
+  </div>
+</form>
+</body>

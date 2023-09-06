@@ -1,0 +1,97 @@
+<body>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h3 class="brand">
+        <span>Admin Panel</span>
+      </h3>
+    </div>
+
+    <div class="sidebar-menu">
+      <ul>
+        <li>
+          <a routerLink="ahome">
+            <span><i class='bx bxs-home' ></i></span>
+            <span>&nbsp;&nbsp;&nbsp;Home</span>
+          </a>
+        </li>
+
+        <li class="right-menu">
+          <a class="menu-button">
+            <span><i class='bx bx-notepad' ></i></span>
+            <span>&nbsp;&nbsp;&nbsp;Registrations</span>
+          </a>
+          <div class="dropdown-menu">
+            <li><a routerLink="viewdistrict">District</a></li>
+            <li><a routerLink="viewplace">Place</a></li>
+            <li><a routerLink="departmentview">Department</a></li>
+            <li><a routerLink="designationview">Designation</a></li>
+            <li><a routerLink="facultyview">Faculty</a></li>
+            <li><a routerLink="coursetypeview">Course Type</a></li>
+            <li><a routerLink="courseview">Course</a></li>
+            <li><a routerLink="batchview">Batch</a></li>
+            <li><a routerLink="semesterview">Semester</a></li>
+            <li><a routerLink="studentview">Student</a></li>
+          </div>
+        </li>
+        <li class="right-menu">
+          <a class="menu-button">
+            <span><i class='bx bxs-user-check' ></i></span>
+            <span>&nbsp;&nbsp;&nbsp;Verify Users</span>
+          </a>
+          <div class="dropdown-menu">
+            <li><a routerLink="facultyverifyview">Faculty</a></li>
+            <li><a routerLink="studentverifyview">Student</a></li>
+          </div>
+        </li>
+        <li>
+          <a routerLink="/Admin/areport">
+            <span><i class='bx bxs-report'></i></span>
+            <span>&nbsp;&nbsp;&nbsp;Reports</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/Admin/acomplaints">
+            <span><i class='bx bxs-message-rounded-dots'></i></span>
+            <span>&nbsp;&nbsp;&nbsp;Complaints</span>
+          </a>
+        </li>
+        <li>
+          <a (click)="logout()" style="cursor: pointer;">
+            <span><i class='bx bx-log-out' ></i></span>
+            <span>&nbsp;&nbsp;&nbsp;Log Out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <header>
+        <div class="logotitle">
+          <img src="assets/naefx.png">
+          <h2>NEW EDUCATION FRAMEWORK FOR EXCELLENCE</h2>
+        </div>
+
+        <div class="social-icons">
+          <ul>
+            <li>
+                <div class="dropdown">
+                  <button class="dropbtn"><img [src]="image || 'assets/no_profile_pic.jpg'" style="height: 38px;width: 38px; border-radius: 50%;"></button>
+                  <div class="dropdown-content">
+                    <a routerLink="adminprofile">My Profile</a>
+                    <a routerLink="/Admin/addadmin">Add Admin</a>
+                    <a (click)="logout()">Logout</a>
+                  </div>
+                </div>
+            </li>
+        </ul>
+        </div>
+      </header>
+    </div>
+  </div>
+      <div class="main-content">
+        <main>
+          <router-outlet></router-outlet>
+        </main>
+      </div>
+
+</body>

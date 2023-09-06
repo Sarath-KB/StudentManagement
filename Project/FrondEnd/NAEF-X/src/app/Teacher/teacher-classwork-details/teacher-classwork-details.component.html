@@ -1,0 +1,61 @@
+<body align="center">
+    <div class="left">
+        <div class="flex">
+            <h1 align="center">{{title}}</h1>
+            <button (click)="deletework()">Delete</button>
+        </div>
+        <p>{{description}}</p>
+        <iframe [src]="sanitizeurl(Pdfurl) || 'assets/NAEF-X_Report (2).pdf'" width="75%" height="400px"></iframe>
+    </div>
+    <div class="right">
+        <div style="height:150px; margin-top: 20px;">
+            <table class="flex-table">
+                <caption>Submitted on Time</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let us of readdata">
+                        <td>{{us.student_name}}</td>
+                        <td><a [href]="us.submitted_files">View</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="height:150px; margin-top: 20px;">
+            <table class="flex-table">
+                <caption>Late Submitions</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let us of readdata1">
+                        <td>{{us.student_name}}</td>
+                        <td><a [href]="us.submitted_files">View</a></td>
+                    </tr> 
+                </tbody>
+            </table>
+        </div>
+        <div style="height:150px; margin-top: 20px;">
+            <table class="flex-table">
+                <caption>Not Yet Submitted</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let us of readdata2">
+                        <td>{{us.student_name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

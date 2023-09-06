@@ -1,0 +1,28 @@
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="assets/reg-3.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>BATCH REGISTRATION</h2>
+                <form [formGroup]="batchform" (ngSubmit)="batchsubmit()">
+                    <div class="inputBx">
+                        <span>BATCH NAME</span>
+                        <input type="text" formControlName="batchname">
+                    </div>
+                    <div class="inputBx">
+                        <span>COURSE</span>
+                        <select formControlName="coursename">
+                            <option value="" selected disabled style="text-align: center;">------Select------</option>
+                            <option *ngFor="let us of readdata" value="{{us.course_id}}">{{us.course_abbreviation}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="REGISTER">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

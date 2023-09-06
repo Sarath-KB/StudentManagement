@@ -1,0 +1,27 @@
+<div class="border">
+<caption>
+  <button routerLink="/HOD/class">ADD NEW</button>
+  <h1>CLASS DETAILS</h1>
+  <button style="background: #fff; border:#fff;"></button>
+</caption>
+<table class="table">
+  <thead>
+    <tr>
+     <th>S.No</th>
+     <th>CLASS</th>
+     <th>TUTER</th>
+     <th>DELETE</th>
+     <th>EDIT</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let us of readdata; let j=index">
+          <td data-label="S.No">{{j+1}}</td>
+          <td data-label="Name">{{us.course_abbreviation}} {{us.class_name}} {{us.batch_name}}</td>
+          <td data-label="Tuter">{{us.faculty_name}}</td>
+          <td data-label="Delete" class="action" (click)="DeleteClass(us.class_id)">DELETE</td>
+          <td data-label="Edit" class="action" [routerLink]="['/HOD/editclass',us.class_id]">EDIT</td>
+      </tr>
+  </tbody>
+</table>
+</div>

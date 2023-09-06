@@ -1,0 +1,27 @@
+<div class="border">
+    <caption>
+        <button routerLink="/Admin/place">ADD NEW</button>
+        <h1>PLACE DETAILS</h1>
+        <button style="background: #fff; border:#fff;"></button>
+    </caption>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Sl. No.</th>
+                <th>PLACE NAME</th>
+                <th>DISTRICT NAME</th>
+                <th>DELETE</th>
+                <th>EDIT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let us of readdata; let j=index">
+                <td>{{j+1}}</td>
+                <td>{{us.place_name}}</td>
+                <td>{{us.district_name}}</td>
+                <td><a (click)="deleteplace(us.place_id)">DELETE</a></td>
+                <td><a [routerLink]="['/Admin/editplace',us.place_id]">EDIT</a></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>

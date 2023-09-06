@@ -1,0 +1,33 @@
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="assets/reg-8.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>EDIT CLASS DETAILS</h2>
+                <form [formGroup]="classupdateform">
+                    <div class="inputBx">
+                        <span>CLASS NAME</span>
+                        <input type="text" formControlName="classname">
+                    </div>
+                    <div class="inputBx">
+                        <span>BATCH</span>
+                        <select formControlName="batchname">
+                            <option *ngFor="let us of readdata1" value="{{us.batch_id}}">{{us.course_abbreviation}} {{us.batch_name}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <span>FACULTY</span>
+                        <select formControlName="facultyname">
+                            <option *ngFor="let us of readdata2" value="{{us.faculty_id}}">{{us.faculty_name}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="UPDATE" (click)="updateclass()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

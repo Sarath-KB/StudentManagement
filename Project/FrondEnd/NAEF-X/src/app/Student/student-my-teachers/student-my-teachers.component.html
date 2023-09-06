@@ -1,0 +1,20 @@
+<h1>My Teachers & Contact Details</h1>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Sl. No.</th>
+      <th>Teacher Name</th>
+      <th>E-Mail</th>
+      <th>Contact No.</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let us of readdata; let j = index">
+    <td>{{j+1}}</td>
+    <td>{{us.faculty_name}}</td>
+    <td><a href="mailto:{{us.faculty_email}}"><i class='bx bx-envelope' ></i></a></td>
+    <td><a href="tel:+91{{us.faculty_contactno}}"><i class='bx bxs-phone-call' ></i></a></td>
+  </tr>
+</table>
+</div>

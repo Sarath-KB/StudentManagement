@@ -1,0 +1,28 @@
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="assets/reg-10.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>SEMESTER REGISTRATION</h2>
+                <form [formGroup]="semesterform" (ngSubmit)="semestersubmit()">
+                    <div class="inputBx">
+                        <span>SEMESTER NAME</span>
+                        <input type="text" formControlName="semestername">
+                    </div>
+                    <div class="inputBx">
+                        <span>CLASS</span>
+                        <select formControlName="classname">
+                            <option value="" selected disabled style="text-align: center;">------Select------</option>
+                            <option *ngFor="let us of readdata" value="{{us.class_id}}">{{us.course_abbreviation}} {{us.class_name}} {{us.batch_name}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="REGISTER">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

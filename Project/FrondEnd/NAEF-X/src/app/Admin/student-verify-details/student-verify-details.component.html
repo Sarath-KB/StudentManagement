@@ -1,0 +1,25 @@
+<div class="border">
+    <caption>
+        <h1>VERIFY STUDENT</h1>
+    </caption>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Sl. No.</th>
+                <th>STUDENT NAME</th>
+                <th>BATCH</th>
+                <th>COURSE</th>
+                <th>VIEW & VERIFY</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let us of readdata; let j=index">
+                <td>{{j+1}}</td>
+                <td>{{us.student_name}}</td>
+                <td>{{us.batch_name}}</td>
+                <td>{{us.course_abbreviation}}</td>
+                <td><a [routerLink]="['/Admin/studentverify',us.student_id]">VIEW & VERIFY</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

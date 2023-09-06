@@ -1,0 +1,63 @@
+<body>
+  <div class="wrapper">
+    <!--Top menu -->
+    <div class="sidebar">
+      <div class="profile">
+        <img [src]="imageUrl || 'assets/no_profile_pic.jpg'">
+        <h3>{{name}}</h3>
+        <p>{{deptname}}</p>
+        <p><i><a routerLink="/Teacher/teacherprofile">My Profile</a></i></p>
+      </div>
+      <ul>
+        <li *ngIf="status===2">
+          <a routerLink="thome">
+            <span class="icon"><i class='bx bx-home-alt'></i></span>
+            <span class="item" routerLink="teacherhome">Home</span>
+          </a>
+        </li>
+        <li class="right-menu" *ngIf="status===2">
+          <a class="menu-button">
+            <span><i class='bx bx-list-ul' ></i></span>
+            <span>&nbsp;&nbsp;&nbsp;View</span>
+          </a>
+          <div class="dropdown-menu">
+        <li><a routerLink="tstudentsview">Students</a></li>
+    </div>
+    </li>
+    <li class="right-menu" *ngIf="status===2">
+      <a class="menu-button">
+        <span><i class='bx bxs-box'></i></span>
+        <span>&nbsp;&nbsp;&nbsp;Complaints</span>
+      </a>
+      <div class="dropdown-menu" >
+    <li><a routerLink="tmycomplaints">Register</a></li>
+    <li><a routerLink="tviewcomplaint">View</a></li>
+  </div>
+  </li>
+  <li *ngIf="status===2">
+    <a routerLink="treports">
+      <span class="icon"><i class='bx bxs-report'></i></span>
+      <span class="item">Reports</span>
+    </a>
+  </li>
+  <li (click)="TeacherLogout()">
+    <a>
+      <span class="icon"><i class='bx bx-log-out'></i></span>
+      <span class="item">Log Out</span>
+    </a>
+  </li>
+  </ul>
+
+  </div>
+  <div class="topbar">
+    <div class="left">
+      <img src="assets/naefx.png" width="50px" height="50px">
+      <h2>NEW AUTOMATED EDUCATION FRAMEWORK FOR EXCELLENCE</h2>
+    </div>
+  </div>
+
+  </div>
+</body>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

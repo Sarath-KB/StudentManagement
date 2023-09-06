@@ -1,0 +1,59 @@
+<body>
+  <form [formGroup]="facultyForm">
+  <div class="wrapper">
+    <div class="img-area">
+      <div class="inner-area">
+        <img [src]="facultyForm.controls['image']?.value || imageUrl || 'assets/no_profile_pic.jpg'" alt="img">
+        <div class="hover-edit-image">
+          <div class="img-holder">
+            <input type="file" name="" class="" id="" (change)="onFileChange($event)">
+          </div>
+          <label for="" class="edit-img-label">Edit Image</label>
+        </div>
+      </div>
+    </div>
+    <div class="icon arrow" routerLink="/Teacher/teacherprofile"><i class='bx bx-left-arrow-alt'></i></div>
+    <div class="name">{{name}}</div>
+    <div class="about">{{designation}}, Department of {{dept}}</div>
+    <br>
+    <div class="buttons">
+      <button>E-Mail</button>
+      <input type="text" formControlName="email">
+    </div>
+    <div class="buttons">
+      <button>Contact Number</button>
+      <input type="text" formControlName="contact">
+    </div>
+    <div class="buttons">
+      <button>District</button>
+      <select formControlName="district" (change)="getPlace($event)">
+        <option value="" selected disabled>---Select---</option>
+        <option *ngFor="let us of readdata" value="{{us.district_id}}">{{us.district_name}}</option>
+      </select>
+    </div>
+    <div class="buttons">
+      <button>Place</button>
+      <select formControlName="place">
+        <option value="" selected disabled>---Select---</option>
+        <option *ngFor="let us of readdata2" value="{{us.place_id}}">{{us.place_name}}</option>
+      </select>
+    </div>
+    <div class="buttons">
+      <button>Gender</button>
+      <input style="width:38%" type="radio" name="gender" value="Male" formControlName="gender">Male
+      <input style="width:38%" type="radio" name="gender" value="Female" formControlName="gender">Female
+    </div>
+    <div class="buttons">
+      <button>Date of Birth</button>
+      <input type="date" formControlName="dateofbirth">
+    </div>
+    <div class="buttons">
+      <button>Adhaar</button>
+      <input type="text" formControlName="adhaar">
+    </div>
+    <div class="social-icons">
+      <a class="fb" (click)="updateprofile()"><i class='bx bxs-save'></i></a>
+    </div>
+  </div>
+</form>
+</body>

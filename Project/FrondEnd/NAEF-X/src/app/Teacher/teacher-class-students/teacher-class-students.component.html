@@ -1,0 +1,22 @@
+<h1>STUDENTS</h1><br><br><br>
+<div id="table-scroll" class="table-scroll">
+  <table id="main-table" class="main-table" border="0">
+    <thead>
+      <tr>
+        <th scope="col">Sl. No.</th>
+        <th scope="col">Photo</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">Mail</th>
+        <th scope="col">Call</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let us of readdata; let j = index">
+        <td>{{j+1}}</td>
+        <td><img [src]="us.student_photo || 'assets/no_profile_pic.jpg'" style="height: 30px;width: 30px; border-radius: 50%;"></td>
+        <td>{{us.student_name}}</td>
+        <td><a href="mailto:{{us.student_email}}"><i class='bx bx-envelope' ></i></a></td>
+        <td><a href="tel:+91{{us.student_contactno}}"><i class='bx bxs-phone'></i></a></td>
+      </tr>
+  </table>
+</div>

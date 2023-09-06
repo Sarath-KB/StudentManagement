@@ -1,0 +1,23 @@
+<div class="border">
+    <caption>
+        <button routerLink="/Admin/designation">ADD NEW</button>
+        <h1>DESIGNATION DETAILS</h1>
+        <button style="background: #fff; border:#fff;"></button>
+    </caption>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Sl. No.</th>
+                <th>DESIGNATION TITLE</th>
+                <th>DELETE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let us of readdata; let j=index">
+                <td>{{j+1}}</td>
+                <td>{{us.designation_title}}</td>
+                <td><a (click)="deleteDesignation(us.designation_id)">DELETE</a></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>

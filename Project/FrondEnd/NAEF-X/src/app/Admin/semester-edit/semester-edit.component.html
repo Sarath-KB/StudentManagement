@@ -1,0 +1,27 @@
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="assets/reg-10.jpg">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>SEMESTER EDIT</h2>
+                <form [formGroup]="semesterupdateform">
+                    <div class="inputBx">
+                        <span>SEMESTER NAME</span>
+                        <input type="text" formControlName="semestername">
+                    </div>
+                    <div class="inputBx">
+                        <span>CLASS</span>
+                        <select formControlName="classname">
+                            <option *ngFor="let us of readdata" value="{{us.class_id}}">{{us.course_abbreviation}} {{us.class_name}} {{us.batch_name}}</option>
+                        </select>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="UPDATE" (click)="updatesemester()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>

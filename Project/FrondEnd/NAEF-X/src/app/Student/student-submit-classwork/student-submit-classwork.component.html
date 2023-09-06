@@ -1,0 +1,17 @@
+<body align="center">
+    <div class="left">
+        <div class="flex">
+            <h1 align="center">{{title}}</h1>
+        </div>
+        <p>{{description}}</p>
+        <iframe [src]="sanitizeurl(url) || 'assets/NAEF-X_Report (2).pdf'" width="75%" height="400px"></iframe>
+    </div>
+    <div class="right">
+        <form [formGroup]="submitassignment">
+            <h2>Submit Response</h2>
+            <span>Due : {{due}}</span>
+            <input type="file" (change)="onFileChange($event)">
+            <button (click)="submit()">Submit</button>
+        </form>
+    </div>
+</body>
